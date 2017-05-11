@@ -17,7 +17,7 @@ function isMarkdown(fileNode) {
 function replaceMarkdownWithHtml(fileNode) {
   // Find each line of code, which in this case is markdown
   const markdownNodes = fileNode.querySelectorAll('.blob-code .blob-code-inner');
-  const markdownContent = Array.from(markdownNodes).map(node => {
+  Array.from(markdownNodes).map(node => {
     let content = node.textContent;
     if (content[0] === '+' || content[0] === '-') {
       content = content.substr(1);
