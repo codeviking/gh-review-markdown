@@ -18,10 +18,9 @@ function replaceMarkdownWithHtml(fileNode) {
   // Find each line of code, which in this case is markdown
   const markdownNodes = fileNode.querySelectorAll('.blob-code .blob-code-inner');
   Array.from(markdownNodes).map(node => {
-    let content = node.textContent;
-    if (content[0] === '+' || content[0] === '-') {
-      content = content.substr(1);
-    }
+    // Strip either a leading "+" or "-" (for additions / removals) and any other 
+    // whitespace that Github puts at the front to align things correctly.
+    let content = node.textContent.substr(1);
     // Replace the HTML with the markdown version.
     node.innerHTML = markdown.toHTML(content)
   });
