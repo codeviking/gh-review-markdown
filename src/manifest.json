@@ -1,0 +1,13 @@
+{
+  "manifest_version"  : 2,
+  "name"              : "Markdownify",
+  "description"       : "Makes",
+  "version"           : "0.1",
+  "content_scripts"   : [
+    {
+      "matches" : [ "https://github.com/*/pull/*" ],
+      "js"      : [ "markdown.js", "render-markdown.js" ]
+    }
+  ],
+  "permissions"       : []
+}

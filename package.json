@@ -1,0 +1,11 @@
+{
+  "name": "gh-review-markdown",
+  "version": "0.1.0",
+  "description": "A Google Chrome extension that makes it easy(ish) to review markdown documents present in Github pull requests.",
+  "repository": "codeviking/gh-review-markdown",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Skjonsberg <skoneberg@gmail.com>",
+  "license": "ISC"
+}
